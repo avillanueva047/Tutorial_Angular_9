@@ -1,0 +1,9 @@
+<h3>Best Writters</h3>
+<div class="grid grid-pad">
+    <a *ngFor="let writter of writters" class="col-1-4" routerLink="/detail/{{writter.id}}">
+        <div class="module writter">
+            <h4>{{writter.name}}</h4>
+        </div>
+    </a>
+</div>
+<app-hero-search></app-hero-search>

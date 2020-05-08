@@ -1,0 +1,17 @@
+<h2>My Writters</h2>
+<div>
+    <label>Writter name:
+        <input #writterName />
+    </label>
+    <button (click)="add(writterName.value); writterName.value=''">
+        Add
+    </button>
+</div>
+<ul class="writters">
+    <li *ngFor="let writter of writters">
+        <a routerLink="/detail/{{writter.id}}">
+            <span class="badge">{{writter.id}}</span> {{writter.name}}
+        </a>
+        <button class="delete" title="delete writter" (click)="delete(writter)">Delete</button>
+    </li>
+</ul>

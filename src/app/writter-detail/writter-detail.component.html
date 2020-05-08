@@ -1,0 +1,27 @@
+<div class="wrapper">
+    <div *ngIf="writter" class="item1">
+        <h2>{{writter.name}} Details</h2>
+        <div>
+            <label>Name:
+                <input [(ngModel)]="writter.name" placeholder="name">
+            </label>
+        </div>
+        <div class="books">
+            <h3>Libros</h3>
+        </div>
+        <div class="list-books">
+            <li *ngFor="let book of writter.books">
+                <span class="badge">{{book}}</span>
+            </li>
+        </div>
+        <div class="bio">
+            <p>{{writter.bio}}</p>
+        </div>
+        <button (click)="goBack()">Go Back</button>
+        <div class="divider"></div>
+        <button (click)="save()">Save</button>
+    </div>
+    <div class="photo">
+        <img src={{writter.photo}} alt="">
+    </div>
+</div>
